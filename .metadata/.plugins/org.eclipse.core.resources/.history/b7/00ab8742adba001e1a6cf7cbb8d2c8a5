@@ -1,0 +1,27 @@
+package hello;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Launch_Browser {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     WebDriver driver=new FirefoxDriver();
+     driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+    try {
+		Thread.sleep(10000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+    WebElement user= driver.findElement(By.xpath("//input[@placeholder=\"Username\"]"));
+     user.sendKeys("madhu");
+     
+    
+    // driver.close();
+	}
+
+}
